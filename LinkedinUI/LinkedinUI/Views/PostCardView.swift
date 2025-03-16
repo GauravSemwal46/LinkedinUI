@@ -55,18 +55,6 @@ struct PostCardView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: .infinity, height: .infinity, alignment: .center)
             Divider()
-            HStack(alignment: .center) {
-                ForEach(socialData, id: \.ids) { data in
-                        VStack {
-                            Image(systemName: data.image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30, alignment: .leading)
-                            Text(data.title)
-                        }
-                    Spacer()
-                }
-            }.padding(.leading)
         }
     }
 }
